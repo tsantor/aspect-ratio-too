@@ -60,7 +60,6 @@ clean-pyc: ## remove Python file artifacts
 
 dist: clean ## builds source and wheel package
 	python -m build --wheel
-	# cp dist/*.whl dist/aspect_ratio-latest-py2.py3-none-any.whl
 
 release_test: dist  ## upload package to pypi test
 	twine upload dist/* -r pypitest
@@ -72,7 +71,10 @@ release: dist ## package and upload a release
 # X Studios S3 PyPi
 # -----------------------------------------------------------------------------
 
-push_to_s3:  ## push distro to S3 bucket
+create_latest_copy:  dist
+	cp dist/*.whl dist/aspect_ratio_too-latest-py2.py3-none-any.whl
+
+push_to_s3:  create_latest_copy ## push distro to S3 bucket
 	aws s3 sync --profile=${aws_profile} --acl public-read ./dist/ s3://xstudios-pypi/ \
         --exclude "*" --include "*.whl"
 	echo "https://${s3_bucket}.s3.amazonaws.com/aspect_ratio-latest-py2.py3-none-any.whl"

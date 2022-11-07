@@ -17,9 +17,8 @@ def closest_number(number, multiple):
 
 
 def round_to_multiple(number, multiple, direction="nearest"):
-    if direction == "nearest" or direction not in ["up", "down"]:
-        return multiple * round(number / multiple)
-    elif direction == "up":
+    if direction == "up":
         return multiple * ceil(number / multiple)
     elif direction == "down":
         return multiple * floor(number / multiple)
+    return multiple * round(number / multiple)

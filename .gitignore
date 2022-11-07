@@ -11,3 +11,8 @@ dist/
 
 # Editor
 .vscode/
+
+# Testing leftovers
+coverage_html_report/
+.tox/
+.coverage
