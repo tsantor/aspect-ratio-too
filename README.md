@@ -28,8 +28,8 @@ Know the aspect ratio you want but don't know the corresponding width/height? Tr
     arc.width_to_dimensions(1920)  # (1920, 1080)
     arc.height_to_dimensions(1080)  # (1920, 1080)
 
-    arc.height_to_width(1920)  # 1080
-    arc.width_to_height(1080)  # 1920
+    arc.width_to_height(1920)  # 1920
+    arc.height_to_width(1080)  # 1080
 
 Or calculate the aspect ratio given know pixel dimensions:
 
@@ -37,7 +37,7 @@ Or calculate the aspect ratio given know pixel dimensions:
 
     aspect_ratio(1920, 1080)  # 1.7777777777777777
 
-    aspect_ratio_str(1920, 1080)  # "16:9"
+    aspect_ratio_str(1920, 1080)  # 16:9
 
 
 ## Issues
