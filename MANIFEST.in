@@ -1,0 +1,9 @@
+include AUTHORS.md
+include HISTORY.md
+include README.md
+
+include requirements.txt
+include requirements_*.txt
+
+recursive-include src/aspect_ratio/data/ *.cfg
+# recursive-include src/aspect_ratio/data/ *.ps1

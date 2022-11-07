@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aspect-ratio-too"
+description = "Aspect ratio calculations."
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+dynamic = ["version", "readme"]
+requires-python = ">=3.6"
+authors = [{ name = "Tim Santor", email = "tsantor@xstudios.com" }]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pre-commit",
+    "flake8",
+    "pylint",
+    "wheel",
+    "build",
+]
+
+[tool.setuptools.packages.find]
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "aspect_ratio_too.__version__"}
+readme = {file = ["README.md", "HISTORY.md"]}
