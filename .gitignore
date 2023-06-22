@@ -16,3 +16,5 @@ dist/
 coverage_html_report/
 .tox/
 .coverage
+.python-version
+htmlcov/

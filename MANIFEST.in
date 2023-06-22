@@ -1,6 +1,7 @@
 include AUTHORS.md
 include HISTORY.md
 include README.md
+include LICENSE
 
 include requirements.txt
 include requirements_*.txt
