@@ -1,4 +1,5 @@
 import math
+
 from aspect_ratio_too.utils import closest_number
 
 

@@ -1,4 +1,8 @@
-from aspect_ratio_too import AspectRatioCalculator, aspect_ratio_str, aspect_ratio
+from aspect_ratio_too import (
+    AspectRatioCalculator,
+    aspect_ratio,
+    aspect_ratio_str,
+)
 
 
 def test_2160p():
@@ -49,9 +53,20 @@ def test_240p():
     assert arc.width_to_dimensions(width) == (width, height)
     assert arc.height_to_dimensions(height) == (width, height)
 
+
 def test_aspect_ratio():
     assert aspect_ratio(1920, 1080) == 1.7777777777777777
 
 
 def test_aspect_ratio_str():
     assert aspect_ratio_str(1920, 1080) == "16:9"
+
+
+def test_width_to_height():
+    arc = AspectRatioCalculator(16, 9)
+    assert arc.width_to_height(1920) == 1080
+
+
+def test_height_to_width():
+    arc = AspectRatioCalculator(16, 9)
+    assert arc.height_to_width(1080) == 1920

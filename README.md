@@ -4,6 +4,11 @@
 ## Overview
 Aspect ratio calculations.
 
+## Installation
+
+    pip install aspect-ratio-too
+
+
 
 ## Development
 
@@ -11,10 +16,9 @@ Aspect ratio calculations.
     make reqs
     pip install -e .
 
+## Testing
 
-## Installation
-
-    pip install aspect-ratio-too
+    pytest
 
 
 ## Usage
@@ -28,8 +32,8 @@ Know the aspect ratio you want but don't know the corresponding width/height? Tr
     arc.width_to_dimensions(1920)  # (1920, 1080)
     arc.height_to_dimensions(1080)  # (1920, 1080)
 
-    arc.width_to_height(1920)  # 1920
-    arc.height_to_width(1080)  # 1080
+    arc.width_to_height(1920)  # 1080
+    arc.height_to_width(1080)  # 1920
 
 Or calculate the aspect ratio given know pixel dimensions:
 
