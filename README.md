@@ -8,8 +8,6 @@ Aspect ratio calculations.
 
     pip install aspect-ratio-too
 
-
-
 ## Development
 
     make env
@@ -18,8 +16,11 @@ Aspect ratio calculations.
 
 ## Testing
 
-    pytest
+    pytest -v
+    tox
 
+    # Run coverage
+    pytest --cov-report html --cov-report term --cov=tests/
 
 ## Usage
 Know the aspect ratio you want but don't know the corresponding width/height? Try this:
@@ -42,7 +43,6 @@ Or calculate the aspect ratio given know pixel dimensions:
     aspect_ratio(1920, 1080)  # 1.7777777777777777
 
     aspect_ratio_str(1920, 1080)  # 16:9
-
 
 ## Issues
 
