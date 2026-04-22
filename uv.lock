@@ -17,8 +17,14 @@ wheels = [
 
 [[package]]
 name = "aspect-ratio-too"
-version = "0.1.1"
+version = "0.2.0"
 source = { editable = "." }
+
+[package.optional-dependencies]
+cli = [
+    { name = "click" },
+    { name = "rich" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -29,11 +35,18 @@ dev = [
     { name = "xapp-tools" },
 ]
 test = [
+    { name = "click" },
     { name = "pytest-cov" },
+    { name = "rich" },
     { name = "tox-uv" },
 ]
 
 [package.metadata]
+requires-dist = [
+    { name = "click", marker = "extra == 'cli'", specifier = ">=8.1.8" },
+    { name = "rich", marker = "extra == 'cli'", specifier = ">=13.9.4" },
+]
+provides-extras = ["cli"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -44,7 +57,9 @@ dev = [
     { name = "xapp-tools", specifier = ">=0.4.0" },
 ]
 test = [
+    { name = "click", specifier = ">=8.1.8" },
     { name = "pytest-cov", specifier = ">=7.0.0" },
+    { name = "rich", specifier = ">=13.9.4" },
     { name = "tox-uv", specifier = ">=1.29.0" },
 ]
 

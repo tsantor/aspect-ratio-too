@@ -1,6 +1,6 @@
 # Aspect Ratio Too
 
-![Coverage](https://img.shields.io/badge/coverage-100.0%25-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-91.45%25-brightgreen)
 
 ## Overview
 
@@ -10,6 +10,12 @@ Aspect ratio calculations.
 
 ```bash
 uv add aspect-ratio-too
+```
+
+For CLI use, install optional extras:
+
+```bash
+uv add "aspect-ratio-too[cli]"
 ```
 
 ## Usage
@@ -36,6 +42,17 @@ from aspect_ratio_too import aspect_ratio, aspect_ratio_str
 
 aspect_ratio(1920, 1080)  # 1.7777777777777777
 aspect_ratio_str(1920, 1080)  # 16:9
+```
+
+## CLI
+
+```bash
+aspect-ratio ratio 1920 1080
+aspect-ratio ratio-str 1920 1080
+aspect-ratio width-to-height 16 9 1920
+aspect-ratio height-to-width 16 9 1080
+aspect-ratio width-to-dimensions 16 9 1920
+aspect-ratio height-to-dimensions 16 9 1080
 ```
 
 ## Development
