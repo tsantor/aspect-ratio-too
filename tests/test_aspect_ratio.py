@@ -1,8 +1,6 @@
-from aspect_ratio_too import (
-    AspectRatioCalculator,
-    aspect_ratio,
-    aspect_ratio_str,
-)
+from aspect_ratio_too import AspectRatioCalculator
+from aspect_ratio_too import aspect_ratio
+from aspect_ratio_too import aspect_ratio_str
 
 
 def test_2160p():

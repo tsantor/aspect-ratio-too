@@ -1,0 +1,35 @@
+image: python:3.13
+
+definitions:
+  steps:
+    - step: &quality-gate-logic
+        name: Quality Gates
+        caches:
+          - pip
+        script:
+          - curl -LsSf https://astral.sh/uv/install.sh | sh
+          - export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+          - curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
+          - mkdir -p dist
+          - uv sync --no-default-groups --group dev --group test
+          - just dist
+          - just release-check
+
+pipelines:
+  pull-requests:
+    '**':
+      - step: *quality-gate-logic
+
+  branches:
+    master:
+      - step: *quality-gate-logic
+    main:
+      - step: *quality-gate-logic
+
+  tags:
+    'v*':
+      - step:
+          <<: *quality-gate-logic
+          name: Release Gates + Build
+          artifacts:
+            - dist/**

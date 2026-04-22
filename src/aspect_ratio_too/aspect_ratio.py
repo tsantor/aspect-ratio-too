@@ -17,7 +17,6 @@ def aspect_ratio(width: int, height: int) -> float:
 
 
 class AspectRatioCalculator:
-
     """Calculate pixel dimensions for width/height given an aspect ratio. (eg - 16/9)."""
 
     def __init__(self, ratio_width: int, ratio_height: int):

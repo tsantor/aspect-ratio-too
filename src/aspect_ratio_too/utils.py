@@ -1,4 +1,5 @@
-from math import ceil, floor
+from math import ceil
+from math import floor
 
 
 def closest_number(number, multiple):
@@ -19,6 +20,6 @@ def closest_number(number, multiple):
 def round_to_multiple(number, multiple, direction="nearest"):
     if direction == "up":
         return multiple * ceil(number / multiple)
-    elif direction == "down":
+    if direction == "down":
         return multiple * floor(number / multiple)
     return multiple * round(number / multiple)

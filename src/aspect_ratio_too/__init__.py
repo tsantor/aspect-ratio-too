@@ -1,7 +1,9 @@
-from .aspect_ratio import (  # noqa
-    AspectRatioCalculator,
-    aspect_ratio,
-    aspect_ratio_str,
-)
+from .aspect_ratio import AspectRatioCalculator
+from .aspect_ratio import aspect_ratio
+from .aspect_ratio import aspect_ratio_str
 
-__version__ = "0.1.1"
+__all__ = [
+    "AspectRatioCalculator",
+    "aspect_ratio",
+    "aspect_ratio_str",
+]

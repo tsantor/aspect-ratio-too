@@ -1,0 +1,14 @@
+{
+  "modules": {
+    "aspect_ratio_too": [
+      "AspectRatioCalculator",
+      "aspect_ratio",
+      "aspect_ratio_str"
+    ],
+    "aspect_ratio_too.aspect_ratio": [
+      "AspectRatioCalculator",
+      "aspect_ratio",
+      "aspect_ratio_str"
+    ]
+  }
+}
