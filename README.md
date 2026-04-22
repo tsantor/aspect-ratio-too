@@ -9,30 +9,7 @@ Aspect ratio calculations.
 ## Installation
 
 ```bash
-python3 -m pip install aspect-ratio-too
-```
-
-## Development
-
-```bash
-just --list
-just env
-just uv-install-dev
-just pip-install-editable
-```
-
-## Testing
-
-```bash
-just pytest
-just coverage
-just open-coverage
-```
-
-For quick local quality checks:
-
-```bash
-just check
+uv add aspect-ratio-too
 ```
 
 ## Usage
@@ -61,7 +38,30 @@ aspect_ratio(1920, 1080)  # 1.7777777777777777
 aspect_ratio_str(1920, 1080)  # 16:9
 ```
 
+## Development
+
+```bash
+just --list
+just env
+just uv-install-dev
+just pip-install-editable
+```
+
+## Testing
+
+```bash
+just pytest
+just coverage
+just open-coverage
+```
+
+For quick local quality checks:
+
+```bash
+just check
+```
+
 ## Issues
 
 If you experience any issues, please create one in the
-[Bitbucket issue tracker](https://bitbucket.org/xstudios/aspect-ratio-too/issues).
+[issue tracker](https://bitbucket.org/xstudios/aspect-ratio-too/issues).
